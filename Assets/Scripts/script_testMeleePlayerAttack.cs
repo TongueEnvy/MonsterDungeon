@@ -12,8 +12,7 @@ public class script_testMeleePlayerAttack : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-        animator = gameObject.GetComponent<Animator>();
+        
         currentAttack = 0;
 
 	}
