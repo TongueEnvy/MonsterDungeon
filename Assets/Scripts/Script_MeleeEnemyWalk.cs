@@ -10,6 +10,7 @@ public class Script_MeleeEnemyWalk : MonoBehaviour {
     public List<GameObject> players;
     public GameObject target;
     public GameObject upperBody;
+    public bool canAttack;
 
     NavMeshAgent navAgent;
 
@@ -44,6 +45,7 @@ public class Script_MeleeEnemyWalk : MonoBehaviour {
         else
         {
 
+            canAttack = true;
             navAgent.speed = walkSpeed;
             transform.LookAt(new Vector3(transform.position.x + navAgent.desiredVelocity.x, 0, transform.position.z + navAgent.desiredVelocity.z));
 

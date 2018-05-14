@@ -321,26 +321,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GenericMeleeAttack.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
-    <Compile Include="Assets\Script_MeleeMonsterAttack.cs" />
+    <Compile Include="Assets\Scripts\GenericMeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Newton\script_characterNewtonAttack.cs" />
     <Compile Include="Assets\Scripts\Script_DealDamage.cs" />
     <Compile Include="Assets\Scripts\Script_destroyed.cs" />
     <Compile Include="Assets\Scripts\Script_HP.cs" />
     <Compile Include="Assets\Scripts\Script_MeleeEnemyWalk.cs" />
+    <Compile Include="Assets\Scripts\Script_MeleeMonsterAttack.cs" />
     <Compile Include="Assets\Scripts\Script_PickupObtained.cs" />
     <Compile Include="Assets\Scripts\Script_PlayerHP.cs" />
     <Compile Include="Assets\Scripts\Script_playerTakeDamage.cs" />
     <Compile Include="Assets\Scripts\Script_ProjectileMove.cs" />
-    <Compile Include="Assets\Scripts\script_testMeleePlayerAttack.cs" />
     <Compile Include="Assets\Scripts\script_testMeleePlayerMove.cs" />
-    <Compile Include="Assets\Scripts\Script_testTurretShoot.cs" />
     <Compile Include="Assets\Toon Style Water\Example\GodMode.cs" />
     <Compile Include="Assets\Toon Style Water\FoamyWater.cs" />
     <Compile Include="Assets\Toon Style Water\Sky\skyController.cs" />
