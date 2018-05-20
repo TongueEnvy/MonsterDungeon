@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: da5d1c311e7326145a191c29a8867dd6
+timeCreated: 1526672510
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Chest
+    100004: Cube
+    100006: Cube_001
+    100008: Head
+    100010: //RootNode
+    100012: Left_Bird_Distal
+    100014: Left_Bird_Knuckle
+    100016: Left_Bird_Proximal
+    100018: Left_Calf
+    100020: Left_Forearm
+    100022: Left_Hip
+    100024: Left_Index_Distal
+    100026: Left_Index_Knuckle
+    100028: Left_Index_Proximal
+    100030: Left_Pinkie_Distal
+    100032: Left_Pinkie_Knuckle
+    100034: Left_Pinkie_Proximal
+    100036: Left_Ring_Distal
+    100038: Left_Ring_Knuckle
+    100040: Left_Ring_Proximal
+    100042: Left_Shoulder
+    100044: Left_Thigh
+    100046: Left_Thumb_Distal
+    100048: Left_Thumb_Knuckle
+    100050: Left_Thumb_Proximal
+    100052: Left_Upper_Arm
+    100054: Left_Wrist
+    100056: Neck
+    100058: Pelvis
+    100060: Right_Bird_Distal
+    100062: Right_Bird_Knuckle
+    100064: Right_Bird_Proximal
+    100066: Right_Calf
+    100068: Right_Forearm
+    100070: Right_Hip
+    100072: Right_Index_Distal
+    100074: Right_Index_Knuckle
+    100076: Right_Index_Proximal
+    100078: Right_Pinkie_Distal
+    100080: Right_Pinkie_Knuckle
+    100082: Right_Pinkie_Proximal
+    100084: Right_Ring_Distal
+    100086: Right_Ring_Knuckle
+    100088: Right_Ring_Proximal
+    100090: Right_Shoulder
+    100092: Right_Thigh
+    100094: Right_Thumb_Distal
+    100096: Right_Thumb_Knuckle
+    100098: Right_Thumb_Proximal
+    100100: Right_Upper_Arm
+    100102: Right_Wrist
+    100104: Waist
+    400000: Armature
+    400002: Chest
+    400004: Cube
+    400006: Cube_001
+    400008: Head
+    400010: //RootNode
+    400012: Left_Bird_Distal
+    400014: Left_Bird_Knuckle
+    400016: Left_Bird_Proximal
+    400018: Left_Calf
+    400020: Left_Forearm
+    400022: Left_Hip
+    400024: Left_Index_Distal
+    400026: Left_Index_Knuckle
+    400028: Left_Index_Proximal
+    400030: Left_Pinkie_Distal
+    400032: Left_Pinkie_Knuckle
+    400034: Left_Pinkie_Proximal
+    400036: Left_Ring_Distal
+    400038: Left_Ring_Knuckle
+    400040: Left_Ring_Proximal
+    400042: Left_Shoulder
+    400044: Left_Thigh
+    400046: Left_Thumb_Distal
+    400048: Left_Thumb_Knuckle
+    400050: Left_Thumb_Proximal
+    400052: Left_Upper_Arm
+    400054: Left_Wrist
+    400056: Neck
+    400058: Pelvis
+    400060: Right_Bird_Distal
+    400062: Right_Bird_Knuckle
+    400064: Right_Bird_Proximal
+    400066: Right_Calf
+    400068: Right_Forearm
+    400070: Right_Hip
+    400072: Right_Index_Distal
+    400074: Right_Index_Knuckle
+    400076: Right_Index_Proximal
+    400078: Right_Pinkie_Distal
+    400080: Right_Pinkie_Knuckle
+    400082: Right_Pinkie_Proximal
+    400084: Right_Ring_Distal
+    400086: Right_Ring_Knuckle
+    400088: Right_Ring_Proximal
+    400090: Right_Shoulder
+    400092: Right_Thigh
+    400094: Right_Thumb_Distal
+    400096: Right_Thumb_Knuckle
+    400098: Right_Thumb_Proximal
+    400100: Right_Upper_Arm
+    400102: Right_Wrist
+    400104: Waist
+    2100000: unnamed
+    2100002: Skin
+    2100004: Shirt
+    2100006: Pants
+    2100008: Boots
+    4300000: Cube_001
+    4300002: Cube
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: Cube
+    13700002: Cube_001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -29,30 +29,45 @@ public class Script_DealDamage : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
+        if (other.gameObject.GetComponent<Rigidbody>())
+        {
+
+            var newVelocity = ((other.transform.position - transform.position).normalized *gameObject.GetComponent<Rigidbody>().velocity.magnitude);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(newVelocity, ForceMode.Impulse);
+
+        }
+
         if (other.gameObject.GetComponent<Script_HP>())
         {
 
-            for (var i = 0; i <= possibleTargets.Count - 1; i += 1)
+            if (other.gameObject.GetComponent<Script_HP>().canBeHurt == true)
             {
+                other.gameObject.GetComponent<Script_HP>().canBeHurt = false;
 
-                if (possibleTargets[i] == other.gameObject.tag)
+                other.gameObject.GetComponent<Script_HP>().damageCounter = other.gameObject.GetComponent<Script_HP>().damageTimer;
+
+                for (var i = 0; i <= possibleTargets.Count - 1; i += 1)
                 {
 
-                    other.gameObject.GetComponent<Script_HP>().HP -= Random.Range(minDamage, maxDamage);
-
-                    if(destroyOnHit == true)
+                    if (possibleTargets[i] == other.gameObject.tag)
                     {
 
-                        Destroy(gameObject);
+                        other.gameObject.GetComponent<Script_HP>().HP -= Random.Range(minDamage, maxDamage);
+
+                        if (destroyOnHit == true)
+                        {
+
+                            Destroy(gameObject);
+
+                        }
+
+                        break;
 
                     }
-
-                    break;
 
                 }
 
             }
-
         }
     }
 

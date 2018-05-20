@@ -18,24 +18,24 @@ public class Script_playerTakeDamage : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         
-        if(collision.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
 
             var checkDamage = damageValue;
 
-            if(collision.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth > 0)
+            if(other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth > 0)
             {
 
                 for (var i = 0; i < damageValue; i += 1)
                 {
 
-                    if(collision.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth > 0)
+                    if(other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth > 0)
                     {
 
-                        collision.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth -= 1;
+                        other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth -= 1;
                         checkDamage -= 1;
 
                     }
@@ -56,7 +56,7 @@ public class Script_playerTakeDamage : MonoBehaviour {
                 for (var i = 0; i < damageValue; i += 1)
                 {
 
-                    collision.gameObject.GetComponent<Script_PlayerHP>().currentRedHealth -= 1;
+                    other.gameObject.GetComponent<Script_PlayerHP>().currentRedHealth -= 1;
                     checkDamage -= 1;
 
                     if(checkDamage <= 0)
