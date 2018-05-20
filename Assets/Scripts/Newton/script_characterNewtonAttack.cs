@@ -16,7 +16,7 @@ public class script_characterNewtonAttack : MonoBehaviour {
 		
         if(Input.GetAxisRaw("Attack 1") > 0 && canAttack == true){
 
-            gameObject.GetComponent<GenericMeleeAttack>().MeleeAttack();
+            gameObject.GetComponent<GenericSlashAttack>().MeleeAttack();
 
         }
 	}

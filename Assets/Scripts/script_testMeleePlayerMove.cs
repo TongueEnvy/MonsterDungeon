@@ -10,6 +10,8 @@ public class script_testMeleePlayerMove : MonoBehaviour {
     public float moveSpeed;
     public GameObject cursor;
     public GameObject model;
+    public GameObject camAnchor;
+    public GameObject currentRoom;
     public float cursorSpeed;
     public float cursorRange;
 
@@ -23,6 +25,8 @@ public class script_testMeleePlayerMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        camAnchor.transform.position = currentRoom.transform.position;
 
         var move = new Vector3(Input.GetAxisRaw("Move Horizontal") * moveSpeed, 0, Input.GetAxisRaw("Move Vertical") * moveSpeed);
 
@@ -44,7 +48,7 @@ public class script_testMeleePlayerMove : MonoBehaviour {
 
         }
 
-        line.SetPosition(0, model.transform.position);
+        line.SetPosition(0, model.transform.position + new Vector3(0, .5f, 0));
         line.SetPosition(1, cursor.transform.position);
 
         model.transform.LookAt(cursor.transform.position);

@@ -327,8 +327,12 @@
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
-    <Compile Include="Assets\Scripts\GenericMeleeAttack.cs" />
+    <Compile Include="Assets\Scripts\Generic Behaviors\Generic_LimitVelocity.cs" />
+    <Compile Include="Assets\Scripts\Generic Behaviors\Generic_RadialBurst.cs" />
+    <Compile Include="Assets\Scripts\Generic Behaviors\GenericMeleeAttack.cs" />
+    <Compile Include="Assets\Scripts\Generic Behaviors\GenericSlashAttack.cs" />
     <Compile Include="Assets\Scripts\Newton\script_characterNewtonAttack.cs" />
+    <Compile Include="Assets\Scripts\Script_AddEnemyToRoom.cs" />
     <Compile Include="Assets\Scripts\Script_DealDamage.cs" />
     <Compile Include="Assets\Scripts\Script_destroyed.cs" />
     <Compile Include="Assets\Scripts\Script_HP.cs" />
@@ -338,6 +342,7 @@
     <Compile Include="Assets\Scripts\Script_PlayerHP.cs" />
     <Compile Include="Assets\Scripts\Script_playerTakeDamage.cs" />
     <Compile Include="Assets\Scripts\Script_ProjectileMove.cs" />
+    <Compile Include="Assets\Scripts\Script_RoomManager.cs" />
     <Compile Include="Assets\Scripts\script_testMeleePlayerMove.cs" />
     <Compile Include="Assets\Toon Style Water\Example\GodMode.cs" />
     <Compile Include="Assets\Toon Style Water\FoamyWater.cs" />
