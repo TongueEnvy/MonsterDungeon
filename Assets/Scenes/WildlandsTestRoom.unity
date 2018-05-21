@@ -113,11 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 92f14e98b66f40d40bb189c28cbaef6b, type: 2}
---- !u!1 &26226697 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1848919043984514, guid: 24acf688c1689e847b1daaeaec8015bb,
-    type: 2}
-  m_PrefabInternal: {fileID: 374699241}
 --- !u!1001 &58379033
 Prefab:
   m_ObjectHideFlags: 0
@@ -504,56 +499,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1457578217419766, guid: 24acf688c1689e847b1daaeaec8015bb, type: 2}
-      propertyPath: m_Name
-      value: Minimap
-      objectReference: {fileID: 0}
-    - target: {fileID: 114279687723484166, guid: 24acf688c1689e847b1daaeaec8015bb,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GenMapButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 224593587611712734, guid: 24acf688c1689e847b1daaeaec8015bb,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1291580720821404, guid: 24acf688c1689e847b1daaeaec8015bb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238973221544640, guid: 24acf688c1689e847b1daaeaec8015bb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1848919043984514, guid: 24acf688c1689e847b1daaeaec8015bb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114646755557894868, guid: 24acf688c1689e847b1daaeaec8015bb,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0.5294118
-      objectReference: {fileID: 0}
-    - target: {fileID: 114618270027824554, guid: 24acf688c1689e847b1daaeaec8015bb,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0.5294118
-      objectReference: {fileID: 0}
-    - target: {fileID: 114362940010440816, guid: 24acf688c1689e847b1daaeaec8015bb,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0.53333336
-      objectReference: {fileID: 0}
-    - target: {fileID: 1848919043984514, guid: 24acf688c1689e847b1daaeaec8015bb, type: 2}
-      propertyPath: m_Name
-      value: PlayerPosition
-      objectReference: {fileID: 0}
-    - target: {fileID: 114597354382610658, guid: 24acf688c1689e847b1daaeaec8015bb,
-        type: 2}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 26226697}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24acf688c1689e847b1daaeaec8015bb, type: 2}
   m_IsPrefabParent: 0
