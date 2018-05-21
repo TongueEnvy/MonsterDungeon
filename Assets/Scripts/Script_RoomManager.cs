@@ -5,6 +5,7 @@ using UnityEngine;
 public class Script_RoomManager : MonoBehaviour {
 
     public List<GameObject> enemies;
+    public List<GameObject> spawners;
     public List<GameObject> doors;
     public AnimationClip doorsOpen;
     public AnimationClip doorsClose;
@@ -16,6 +17,15 @@ public class Script_RoomManager : MonoBehaviour {
         {
 
             other.gameObject.GetComponent<script_testMeleePlayerMove>().currentRoom = gameObject;
+
+        }
+
+        foreach(GameObject item in spawners)
+        {
+
+            item.gameObject.GetComponent<Generic_SpawnEnemy>().SpawnEnemy();
+            item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy.gameObject.GetComponent<Script_AddEnemyToRoom>().currentRoom = gameObject;
+            enemies.Add(item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy);
 
         }
 

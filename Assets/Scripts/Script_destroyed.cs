@@ -22,7 +22,6 @@ public class Script_destroyed : MonoBehaviour {
 
         }
         Destroy(gameObject);
-
     }
 
     // Update is called once per frame
