@@ -7679,8 +7679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81f5a0cc84bcc547a35c55cf876e1e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: {fileID: 754134100}
-  door: {fileID: 1536653852}
+  baseRoom: {fileID: 754134100}
+  baseDoor: {fileID: 1536653852}
   playerPosition: {fileID: 2101243849}
 --- !u!114 &485069107
 MonoBehaviour:

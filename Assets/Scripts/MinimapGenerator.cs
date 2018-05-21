@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MinimapGenerator: MonoBehaviour {
-	public GameObject room;
-	public GameObject door;
+	public GameObject baseRoom;
+	public GameObject baseDoor;
 	public GameObject playerPosition;
 	
 	private bool[,] grid = new bool[5, 5];
+	private List<GameObject> rooms = new List<GameObject>();
+	//private GameObject newRoom;
 	
 	private void generateSpeckles() {
 		for(int i = 0; i < 5; i++) {
@@ -27,18 +29,23 @@ public class MinimapGenerator: MonoBehaviour {
 		for(int i = 0; i < 5; i++) {
 			for(int j = 0; j < 5; j++) {
 				if(grid[i, j] == true) {
-					Instantiate(room,
-								new Vector3((-30f * (float)i),
-											(-30f * (float)j),
-											0f),
-								transform.rotation);
+					GameObject newRoom = Instantiate(baseRoom, baseRoom.transform.parent);
+					rooms.Add(newRoom);
+					rooms[rooms.Count - 1].GetComponent<RectTransform>().anchoredPosition =
+						new Vector2(((-30f * (float)i) - 20f),
+									((-30f * (float)j) - 20f));
 				}
 			}
 		}
 	}
 	
 	public void genMapButton() {
+		foreach(GameObject deadRoom in rooms) {
+			Destroy(deadRoom);
+		}
+		rooms = new List<GameObject>();
 		generateSpeckles();
 		createMinimap();
+		Debug.Log(rooms.Count);
 	}
 }
