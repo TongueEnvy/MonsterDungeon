@@ -69,6 +69,43 @@ public class Script_DealDamage : MonoBehaviour
 
             }
         }
+
+        if (other.gameObject.GetComponent<Script_HP_GigaBerry>())
+        {
+
+            if (other.gameObject.GetComponent<Script_HP_GigaBerry>().canBeHurt == true)
+            {
+                other.gameObject.GetComponent<Script_HP_GigaBerry>().canBeHurt = false;
+
+                other.gameObject.GetComponent<Script_HP_GigaBerry>().damageCounter = other.gameObject.GetComponent<Script_HP_GigaBerry>().damageTimer;
+
+                for (var i = 0; i <= possibleTargets.Count - 1; i += 1)
+                {
+
+                    if (possibleTargets[i] == other.gameObject.tag)
+                    {
+
+                        var damageDealt = Random.Range(minDamage, maxDamage);
+
+                        other.gameObject.GetComponent<Script_HP_GigaBerry>().HP -= damageDealt;
+
+                        other.gameObject.GetComponent<Script_HP_GigaBerry>().trackDamage += damageDealt;
+
+                        if (destroyOnHit == true)
+                        {
+
+                            Destroy(gameObject);
+
+                        }
+
+                        break;
+
+                    }
+
+                }
+
+            }
+        }
     }
 
 }
