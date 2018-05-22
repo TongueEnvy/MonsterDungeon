@@ -32,3 +32,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Scenes/WildlandsTestRoom.unity.meta
+*.meta
+Assets/Scenes/Wildlands_test_tongueenvy.unity
+Assets/Scenes/Wildlands_test_tongueenvy.unity
+Assets/Scenes/Wildlands_test_tongueenvy.meta
