@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script_testMeleePlayerMove: MonoBehaviour {
+public class MeleePlayerMove: MonoBehaviour {
     public GameObject cursor;
     public GameObject model;
     public GameObject camAnchor;
