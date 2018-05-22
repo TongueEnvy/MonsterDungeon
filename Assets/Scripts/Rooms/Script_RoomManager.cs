@@ -19,20 +19,12 @@ public class Script_RoomManager: MonoBehaviour {
 
         foreach(GameObject item in spawners)
         {
-<<<<<<< HEAD:Assets/Scripts/Rooms/Script_RoomManager.cs
-            item.gameObject.GetComponent<Generic_SpawnEnemy>().SpawnEnemy();
-            item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy.gameObject.GetComponent<Script_AddEnemyToRoom>().currentRoom = gameObject;
-            enemies.Add(item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy);
-=======
-
             if (item.GetComponent<Generic_SpawnEnemy>().canSpawnEnemy == true)
             {
                 item.gameObject.GetComponent<Generic_SpawnEnemy>().SpawnEnemy();
                 item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy.gameObject.GetComponent<Script_AddEnemyToRoom>().currentRoom = gameObject;
                 enemies.Add(item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy);
             }
-
->>>>>>> fbf1bd8eedf5be45984401ae946a4002c7fe7df8:Assets/Scripts/Script_RoomManager.cs
         }
 
         if(enemies.Count > 0)
@@ -54,8 +46,6 @@ public class Script_RoomManager: MonoBehaviour {
             {
                 item.gameObject.GetComponent<Animator>().Play(doorsOpen.name);
             }
-<<<<<<< HEAD:Assets/Scripts/Rooms/Script_RoomManager.cs
-=======
 
             if (enemiesHaveSpawned == true)
             {
@@ -66,8 +56,6 @@ public class Script_RoomManager: MonoBehaviour {
 
                 }
             }
-
->>>>>>> fbf1bd8eedf5be45984401ae946a4002c7fe7df8:Assets/Scripts/Script_RoomManager.cs
         }
     }
 }
