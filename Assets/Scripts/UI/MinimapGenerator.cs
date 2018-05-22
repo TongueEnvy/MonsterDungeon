@@ -7,13 +7,12 @@ public class MinimapGenerator: MonoBehaviour {
 	public GameObject baseDoor;
 	public GameObject spawnPoint;
 	
-	private bool[,] grid			= new bool[5, 5];
-	private List<GameObject> rooms	= new List<GameObject>();
-	private List<GameObject> doors	= new List<GameObject>();
+	private bool[,] grid				= new bool[5, 5];
+	private List<GameObject> rooms		= new List<GameObject>();
+	private List<GameObject> doors		= new List<GameObject>();
 	private GameObject playerPosition;
-	private bool showMinimap		= true;
-	//private GameObject newRoom;
-	
+	private bool showMinimap			= true;
+
 	private void GenerateSpeckles() {
 		for(int i = 0; i < 5; i++) {
 			for(int j = 0; j < 5; j++) {
@@ -28,28 +27,19 @@ public class MinimapGenerator: MonoBehaviour {
 		}
 	}
 	
-	/*	GenerateDungeon creates 9-15 rooms, which is the
-	**		"healthy average".
-	*/
+	//GenerateDungeon creates 9-15 rooms, which is the "healthy average".
 	private void GenerateDungeon() {
-		//int sourceNode	= 0;
 		int addRooms		= 0;
 		int buildDirection	= 0; //Note, perspective rotated 180 degrees.
 		int i				= 0;
 		int j				= 0;
-		//int randomCounter	= 0;
 		
-		//sourceNode = (int)Random.Range(0f, 24f);
 		addRooms = (int)Random.Range(8f, 14f);
-		//i = sourceNode / 5;
-		//j = sourceNode % 5;
 		i = Mathf.FloorToInt(Random.value * 5);
 		j = Mathf.FloorToInt(Random.value * 5);
 		grid[i, j] = true;
 		
-		//Debug.Log(addRooms);
 		while(addRooms > 0) {
-			//Debug.Log(addRooms);
 			buildDirection = Mathf.CeilToInt(Random.value * 4);
 			switch(buildDirection) {
 				//Build North
@@ -67,7 +57,6 @@ public class MinimapGenerator: MonoBehaviour {
 					}
 					
 					break;
-
 				//Build East
 				case 2:
 					if(j < 4) {
@@ -117,14 +106,6 @@ public class MinimapGenerator: MonoBehaviour {
 				default:
 					break;
 			}
-			
-			/*
-			randomCounter++;
-			if(randomCounter > 255) {
-				Debug.Log(addRooms);
-				addRooms--;
-			}
-			*/
 		}
 	}
 	
@@ -212,7 +193,6 @@ public class MinimapGenerator: MonoBehaviour {
 		doors = new List<GameObject>();
 		GenerateDungeon();
 		CreateMinimap();
-		//Debug.Log(rooms.Count);
 	}
 	
 	public void Update() {
