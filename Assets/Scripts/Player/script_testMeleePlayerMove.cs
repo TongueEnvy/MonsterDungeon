@@ -2,31 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script_testMeleePlayerMove : MonoBehaviour {
-
-    LineRenderer line;
-    Rigidbody movement;
-
-    public float moveSpeed;
+public class script_testMeleePlayerMove: MonoBehaviour {
     public GameObject cursor;
     public GameObject model;
     public GameObject camAnchor;
     public bool inWideRoom;
     public bool inTallRoom;
     public GameObject currentRoom;
+	public float moveSpeed;
     public float cursorSpeed;
     public float cursorRange;
     public float camSpeed;
 
+<<<<<<< HEAD:Assets/Scripts/script_testMeleePlayerMove.cs
     // Use this for initialization
     void Start () {
 
         camAnchor.transform.parent = null;
+=======
+	private LineRenderer line;
+    private Rigidbody movement;
+	
+    private void Start() {
+>>>>>>> d88c5238c80bc271e7169dbf236ee73fa3ca17e1:Assets/Scripts/Player/script_testMeleePlayerMove.cs
         movement = gameObject.GetComponent<Rigidbody>();
         line = gameObject.GetComponent<LineRenderer>();
-
     }
 	
+<<<<<<< HEAD:Assets/Scripts/script_testMeleePlayerMove.cs
 	// Update is called once per frame
 	void Update () {
         var camPos = transform.position;
@@ -89,30 +92,26 @@ public class script_testMeleePlayerMove : MonoBehaviour {
 
         camAnchor.transform.position = Vector3.Lerp(camAnchor.transform.position, camPos, Time.deltaTime * camSpeed);
 
+=======
+	private void Update() {
+        camAnchor.transform.position = currentRoom.transform.position;
+>>>>>>> d88c5238c80bc271e7169dbf236ee73fa3ca17e1:Assets/Scripts/Player/script_testMeleePlayerMove.cs
         var move = new Vector3(Input.GetAxisRaw("Move Horizontal") * moveSpeed, 0, Input.GetAxisRaw("Move Vertical") * moveSpeed);
-
         movement.velocity = new Vector3(move.x, movement.velocity.y, move.z);
-
         var moveCursor = new Vector3(Input.GetAxisRaw("Aim Horizontal") * cursorSpeed, 0, Input.GetAxisRaw("Aim Vertical") * cursorSpeed);
-
         cursor.transform.position += moveCursor;
-
         var cursorDist = Vector3.Distance(transform.position, cursor.transform.position);
 
-        if (cursorDist > cursorRange)
-        {
-
+        if (cursorDist > cursorRange) {
             var vect = transform.position - cursor.transform.position;
             vect = vect.normalized;
             vect *= (cursorDist - cursorRange);
             cursor.transform.position += vect;
-
         }
 
         line.SetPosition(0, model.transform.position + new Vector3(0, .5f, 0));
         line.SetPosition(1, cursor.transform.position);
 
         model.transform.LookAt(cursor.transform.position);
-
     }
 }
