@@ -33,7 +33,11 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Assets/Scenes/WildlandsTestRoom.unity.meta
+
 *.meta
 Assets/Scenes/Wildlands_test_tongueenvy.unity
-Assets/Scenes/Wildlands_test_tongueenvy.unity
-Assets/Scenes/Wildlands_test_tongueenvy.meta
+
+*Assets/Scenes/Wildlands_test_tongueenvy.unity
+
+*Assets/Scenes/Wildlands_test_tongueenvy.meta
+*Assets/ProCore/ProBuilder/Data/ProBuilderPreferences.asset
