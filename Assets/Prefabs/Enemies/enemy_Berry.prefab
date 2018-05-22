@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114851108175683084}
   - component: {fileID: 114502826451136430}
   - component: {fileID: 114188737322207508}
+  - component: {fileID: 114224484142933724}
   - component: {fileID: 114486956479137434}
   - component: {fileID: 114291752894254984}
   m_Layer: 10
@@ -504,6 +505,23 @@ MonoBehaviour:
   playerName: humanoidBodyV3
   chargeSpeed: -8
   chargeDelay: 5
+--- !u!114 &114224484142933724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104454544570642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24745f3b4df67ab4ba38b439a2498bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleItems:
+  - {fileID: 1161316376559040, guid: 67ac730b05af04142a9fb1835cf9a3c2, type: 2}
+  assignedItem: {fileID: 0}
+  itemChance: 10
+  itemNumberMin: 1
+  itemNumberMax: 1
 --- !u!114 &114291752894254984
 MonoBehaviour:
   m_ObjectHideFlags: 1

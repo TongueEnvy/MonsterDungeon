@@ -7,6 +7,8 @@ public class Generic_SpawnEnemy : MonoBehaviour {
     public List<GameObject> possibleEnemies;
     [HideInInspector] public GameObject spawnedEnemy;
 
+    public bool canSpawnEnemy;
+
 	public void SpawnEnemy()
     {
 

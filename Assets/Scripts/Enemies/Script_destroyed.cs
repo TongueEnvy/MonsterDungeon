@@ -21,6 +21,14 @@ public class Script_destroyed : MonoBehaviour {
             gameObject.GetComponent<Generic_RadialBurst>().RadialBurst();
 
         }
+
+        if (gameObject.GetComponent<Generic_DropItem>())
+        {
+
+            gameObject.GetComponent<Generic_DropItem>().DropItems();
+
+        }
+
         Destroy(gameObject);
     }
 

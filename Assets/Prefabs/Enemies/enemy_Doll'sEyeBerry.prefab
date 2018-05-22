@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 114529440158060844}
   - component: {fileID: 114352161412651666}
   - component: {fileID: 114919662147834700}
+  - component: {fileID: 114040402267759234}
   m_Layer: 10
   m_Name: enemy_Doll'sEyeBerry
   m_TagString: Enemy
@@ -431,6 +432,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114040402267759234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706485043981338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24745f3b4df67ab4ba38b439a2498bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleItems:
+  - {fileID: 1161316376559040, guid: 95abf495dc517b944b2ca3216e9f4fa2, type: 2}
+  assignedItem: {fileID: 0}
+  itemChance: 5
+  itemNumberMin: 1
+  itemNumberMax: 1
 --- !u!114 &114352161412651666
 MonoBehaviour:
   m_ObjectHideFlags: 1
