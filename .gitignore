@@ -33,7 +33,17 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Assets/Scenes/WildlandsTestRoom.unity.meta
-*.meta
-Assets/Scenes/Wildlands_test_tongueenvy.unity
+
 Assets/Scenes/Wildlands_test_tongueenvy.unity
 Assets/Scenes/Wildlands_test_tongueenvy.meta
+
+Assets/ProCore/ProBuilder/Data/ProBuilderPreferences.asset
+Assets/Scripts/Generic Behaviors/Generic_DropItem.cs.meta
+Assets/Scenes/test_roomsPuzzle.unity.meta
+Assets/Models/Chunks/floorLUpperRight.blend1.meta
+Assets/Models/Chunks/floorL.blend.meta
+Assets/Models/Chunks/floor28x7.blend.meta
+Assets/Models/Chunks/floor28x20.blend.meta
+Assets/Models/Chunks/floor13x7.blend1.meta
+Assets/Models/Chunks/floor13x7.blend.meta
+Assets/Models/Chunks/floor13x20.blend.meta
