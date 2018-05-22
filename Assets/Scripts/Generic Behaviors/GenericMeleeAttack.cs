@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class GenericMeleeAttack: MonoBehaviour {
     public bool canAttack;
     public Animator animator;
