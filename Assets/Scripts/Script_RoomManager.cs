@@ -7,6 +7,8 @@ public class Script_RoomManager : MonoBehaviour {
     public List<GameObject> enemies;
     public List<GameObject> spawners;
     public List<GameObject> doors;
+    public bool isWideRoom;
+    public bool isTallRoom;
     public AnimationClip doorsOpen;
     public AnimationClip doorsClose;
     public bool enemiesHaveSpawned;
@@ -18,6 +20,31 @@ public class Script_RoomManager : MonoBehaviour {
         {
 
             other.gameObject.GetComponent<script_testMeleePlayerMove>().currentRoom = gameObject;
+            if(isWideRoom == true)
+            {
+
+                other.gameObject.GetComponent<script_testMeleePlayerMove>().inWideRoom = true;
+
+            }
+            else
+            {
+
+                other.gameObject.GetComponent<script_testMeleePlayerMove>().inWideRoom = false;
+
+            }
+
+            if (isTallRoom == true)
+            {
+
+                other.gameObject.GetComponent<script_testMeleePlayerMove>().inTallRoom = true;
+
+            }
+            else
+            {
+
+                other.gameObject.GetComponent<script_testMeleePlayerMove>().inTallRoom = false;
+
+            }
 
         }
 
