@@ -17,7 +17,6 @@ public class Script_RoomManager: MonoBehaviour {
         if (other.gameObject.GetComponent<script_testMeleePlayerMove>())
         {
             other.gameObject.GetComponent<script_testMeleePlayerMove>().currentRoom = gameObject;
-<<<<<<< HEAD:Assets/Scripts/Script_RoomManager.cs
             if(isWideRoom == true)
             {
 
@@ -43,9 +42,6 @@ public class Script_RoomManager: MonoBehaviour {
                 other.gameObject.GetComponent<script_testMeleePlayerMove>().inTallRoom = false;
 
             }
-
-=======
->>>>>>> d88c5238c80bc271e7169dbf236ee73fa3ca17e1:Assets/Scripts/Rooms/Script_RoomManager.cs
         }
 
         foreach(GameObject item in spawners)
