@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 65524136433651736}
   - component: {fileID: 54838992245433196}
   - component: {fileID: 114808076164389202}
+  - component: {fileID: 114041166422228194}
   - component: {fileID: 114809952421227470}
   m_Layer: 0
   m_Name: vase000
@@ -39,9 +40,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1421528592504942}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.012579, y: 1, z: -2.5862374}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -8.83585, y: -6.671448, z: -22.176533}
+  m_LocalScale: {x: 0.25, y: 0.25000012, z: 0.25000012}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -131,6 +132,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114041166422228194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1421528592504942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24745f3b4df67ab4ba38b439a2498bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleItems:
+  - {fileID: 1161316376559040, guid: 67ac730b05af04142a9fb1835cf9a3c2, type: 2}
+  - {fileID: 1161316376559040, guid: 95abf495dc517b944b2ca3216e9f4fa2, type: 2}
+  assignedItem: {fileID: 0}
+  itemChance: 25
+  itemNumberMin: 1
+  itemNumberMax: 1
 --- !u!114 &114808076164389202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,6 +162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 1
+  canBeHurt: 0
+  damageTimer: 0
+  damageCounter: 0
 --- !u!114 &114809952421227470
 MonoBehaviour:
   m_ObjectHideFlags: 1

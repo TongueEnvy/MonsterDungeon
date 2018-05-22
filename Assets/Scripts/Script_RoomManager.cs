@@ -9,6 +9,7 @@ public class Script_RoomManager : MonoBehaviour {
     public List<GameObject> doors;
     public AnimationClip doorsOpen;
     public AnimationClip doorsClose;
+    public bool enemiesHaveSpawned;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,9 +24,12 @@ public class Script_RoomManager : MonoBehaviour {
         foreach(GameObject item in spawners)
         {
 
-            item.gameObject.GetComponent<Generic_SpawnEnemy>().SpawnEnemy();
-            item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy.gameObject.GetComponent<Script_AddEnemyToRoom>().currentRoom = gameObject;
-            enemies.Add(item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy);
+            if (item.GetComponent<Generic_SpawnEnemy>().canSpawnEnemy == true)
+            {
+                item.gameObject.GetComponent<Generic_SpawnEnemy>().SpawnEnemy();
+                item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy.gameObject.GetComponent<Script_AddEnemyToRoom>().currentRoom = gameObject;
+                enemies.Add(item.gameObject.GetComponent<Generic_SpawnEnemy>().spawnedEnemy);
+            }
 
         }
 
@@ -37,12 +41,14 @@ public class Script_RoomManager : MonoBehaviour {
                 item.gameObject.GetComponent<Animator>().Play(doorsClose.name);
 
             }
+
+            enemiesHaveSpawned = true;
         }
         
 
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         
         if(enemies.Count == 0)
@@ -53,6 +59,16 @@ public class Script_RoomManager : MonoBehaviour {
 
                 item.gameObject.GetComponent<Animator>().Play(doorsOpen.name);
 
+            }
+
+            if (enemiesHaveSpawned == true)
+            {
+                foreach (GameObject item in spawners)
+                {
+
+                    item.GetComponent<Generic_SpawnEnemy>().canSpawnEnemy = false;
+
+                }
             }
 
         }
