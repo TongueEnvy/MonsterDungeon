@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class script_testMeleePlayerMove : MonoBehaviour {
 
+    public bool useGamePad;
     public GameObject cursor;
     public GameObject model;
     public GameObject camAnchor;
@@ -15,6 +16,7 @@ public class script_testMeleePlayerMove : MonoBehaviour {
     public float cursorRange;
     public float camSpeed;
 
+    Vector3 lookPos;
     LineRenderer line;
     Rigidbody movement;
 
@@ -91,22 +93,65 @@ public class script_testMeleePlayerMove : MonoBehaviour {
 
         camAnchor.transform.position = Vector3.Lerp(camAnchor.transform.position, camPos, Time.deltaTime * camSpeed);
 
-        var move = new Vector3(Input.GetAxisRaw("Move Horizontal") * moveSpeed, 0, Input.GetAxisRaw("Move Vertical") * moveSpeed);
-        movement.velocity = new Vector3(move.x, movement.velocity.y, move.z);
-        var moveCursor = new Vector3(Input.GetAxisRaw("Aim Horizontal") * cursorSpeed, 0, Input.GetAxisRaw("Aim Vertical") * cursorSpeed);
-        cursor.transform.position += moveCursor;
-        var cursorDist = Vector3.Distance(transform.position, cursor.transform.position);
+        if(Input.GetButtonDown("Control Switch"))
+        {
 
-        if (cursorDist > cursorRange) {
-            var vect = transform.position - cursor.transform.position;
-            vect = vect.normalized;
-            vect *= (cursorDist - cursorRange);
-            cursor.transform.position += vect;
+            if(useGamePad == false)
+            {
+
+                useGamePad = true;
+
+            }
+            else if(useGamePad == true)
+            {
+
+                useGamePad = false;
+
+            }
+
+        }
+
+        if (useGamePad == true)
+        {
+            var move = new Vector3(Input.GetAxisRaw("Move Horizontal") * moveSpeed, 0, Input.GetAxisRaw("Move Vertical") * moveSpeed);
+            movement.velocity = new Vector3(move.x, movement.velocity.y, move.z);
+            var moveCursor = new Vector3(Input.GetAxisRaw("Aim Horizontal") * cursorSpeed, 0, Input.GetAxisRaw("Aim Vertical") * cursorSpeed);
+            cursor.transform.position += moveCursor;
+            var cursorDist = Vector3.Distance(transform.position, cursor.transform.position);
+
+            if (cursorDist > cursorRange)
+            {
+
+                var vect = transform.position - cursor.transform.position;
+                vect = vect.normalized;
+                vect *= (cursorDist - cursorRange);
+                cursor.transform.position += vect;
+
+            }
+        }
+        else
+        {
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+
+            RaycastHit hit;
+
+            float rayLength = 100;
+
+            if(groundPlane.Raycast(ray, out rayLength))
+            {
+
+                lookPos = ray.GetPoint(rayLength);
+                cursor.transform.position = lookPos;
+
+            }
         }
 
         line.SetPosition(0, model.transform.position + new Vector3(0, .5f, 0));
         line.SetPosition(1, cursor.transform.position);
 
-        model.transform.LookAt(cursor.transform.position);
+        model.transform.LookAt(cursor.transform.position, Vector3.up);
     }
 }
