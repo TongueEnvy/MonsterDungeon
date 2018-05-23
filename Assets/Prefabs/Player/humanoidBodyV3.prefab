@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 33340251955784382}
   - component: {fileID: 135847436423782536}
   - component: {fileID: 23120751407652670}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Cursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5860,15 +5860,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43bf23e2399fc44bbe75c43e9ab8d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  useGamePad: 0
   cursor: {fileID: 1278168248107894}
   model: {fileID: 1592372712574724}
   camAnchor: {fileID: 1082338549676290}
   inWideRoom: 0
   inTallRoom: 0
   currentRoom: {fileID: 0}
+  moveSpeed: 6
   cursorSpeed: 2
-  cursorRange: 20
+  cursorRange: 10
   camSpeed: 5
 --- !u!114 &114784127918158288
 MonoBehaviour:
