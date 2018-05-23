@@ -110,11 +110,11 @@ public class script_testMeleePlayerMove : MonoBehaviour {
             }
 
         }
-
+        var move = new Vector3(Input.GetAxisRaw("Move Horizontal") * moveSpeed, 0, Input.GetAxisRaw("Move Vertical") * moveSpeed);
+        movement.velocity = new Vector3(move.x, movement.velocity.y, move.z);
         if (useGamePad == true)
         {
-            var move = new Vector3(Input.GetAxisRaw("Move Horizontal") * moveSpeed, 0, Input.GetAxisRaw("Move Vertical") * moveSpeed);
-            movement.velocity = new Vector3(move.x, movement.velocity.y, move.z);
+            
             var moveCursor = new Vector3(Input.GetAxisRaw("Aim Horizontal") * cursorSpeed, 0, Input.GetAxisRaw("Aim Vertical") * cursorSpeed);
             cursor.transform.position += moveCursor;
             var cursorDist = Vector3.Distance(transform.position, cursor.transform.position);

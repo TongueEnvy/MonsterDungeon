@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 120491031431154110}
   - component: {fileID: 114777926223069702}
   - component: {fileID: 114792482741441776}
+  - component: {fileID: 114884757471450608}
   m_Layer: 8
   m_Name: humanoidBodyV3
   m_TagString: Player
@@ -5957,6 +5958,22 @@ MonoBehaviour:
   shadeHearts:
   - {fileID: 1397290851227174, guid: 55cec1a065d0f404596441e6301831ef, type: 2}
   - {fileID: 1035642105986194, guid: 0ddecd6c902f7a941b7b4d1d005657cf, type: 2}
+--- !u!114 &114884757471450608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138187200304242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ce8ecff187a3b48b4bff8af5085c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leader: {fileID: 1138187200304242}
+  followers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!120 &120491031431154110
 LineRenderer:
   m_ObjectHideFlags: 1
