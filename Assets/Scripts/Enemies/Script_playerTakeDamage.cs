@@ -20,56 +20,66 @@ public class Script_playerTakeDamage : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        if(other.gameObject.tag == "Player")
+
+        if (other.gameObject.tag == "Player")
         {
 
-            var checkDamage = damageValue;
-
-            if(other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth > 0)
+            if (other.gameObject.GetComponent<player_TrackSpecialEffects>().hasBentleysTumor == true)
             {
 
-                for (var i = 0; i < damageValue; i += 1)
+                GameObject.Find("familiar_Bentley'sTumor").GetComponent<Script_HP>().HP -= 1;
+
+            }
+            else
+            {
+
+                var checkDamage = damageValue;
+
+                if (other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth > 0)
                 {
 
-                    if(other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth > 0)
+                    for (var i = 0; i < damageValue; i += 1)
                     {
 
-                        other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth -= 1;
+                        if (other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth > 0)
+                        {
+
+                            other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth -= 1;
+                            checkDamage -= 1;
+
+                        }
+                        else
+                        {
+
+                            break;
+
+                        }
+
+                    }
+
+                }
+
+                if (checkDamage > 0)
+                {
+
+                    for (var i = 0; i < damageValue; i += 1)
+                    {
+
+                        other.gameObject.GetComponent<Script_PlayerHP>().currentRedHealth -= 1;
                         checkDamage -= 1;
 
-                    }
-                    else
-                    {
+                        if (checkDamage <= 0)
+                        {
 
-                        break;
+                            break;
 
-                    }
-
-                }
-
-            }
-
-        if(checkDamage > 0)
-            {
-
-                for (var i = 0; i < damageValue; i += 1)
-                {
-
-                    other.gameObject.GetComponent<Script_PlayerHP>().currentRedHealth -= 1;
-                    checkDamage -= 1;
-
-                    if(checkDamage <= 0)
-                    {
-
-                        break;
+                        }
 
                     }
 
                 }
 
             }
-
         }
 
     if(destroyOnHit == true)

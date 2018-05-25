@@ -15,6 +15,7 @@ public class Script_ProjectileMove: MonoBehaviour {
         lifeCounter = lifeSpan;
     }
 	
+
 	// Update is called once per frame
 	void Update () {
         rb.velocity = (transform.forward * speed);

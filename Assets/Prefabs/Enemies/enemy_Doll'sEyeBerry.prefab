@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 54732332973328518}
   - component: {fileID: 135771049814150670}
   - component: {fileID: 135046669763444214}
-  - component: {fileID: 114724301337067688}
+  - component: {fileID: 114225136104743374}
   - component: {fileID: 114615117273498872}
   - component: {fileID: 114390660232004468}
   - component: {fileID: 114383819103773172}
@@ -449,6 +449,22 @@ MonoBehaviour:
   itemChance: 5
   itemNumberMin: 1
   itemNumberMax: 1
+--- !u!114 &114225136104743374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706485043981338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66919fb1644c9334f837d4e5823ad350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDamage: 3
+  maxDamage: 5
+  destroyOnHit: 0
+  possibleTargets:
+  - Player
 --- !u!114 &114352161412651666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -512,23 +528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ebae3f364344c46979d0eeb9f39f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 5
   HP: 5
   canBeHurt: 1
   damageTimer: 10
   damageCounter: 0
---- !u!114 &114724301337067688
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1706485043981338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a88b71bb1cceab49863091fb048e0d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageValue: 1
-  destroyOnHit: 0
 --- !u!114 &114919662147834700
 MonoBehaviour:
   m_ObjectHideFlags: 1

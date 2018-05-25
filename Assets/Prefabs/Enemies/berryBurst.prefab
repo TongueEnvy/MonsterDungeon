@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 135688388286318020}
   - component: {fileID: 23445308806417746}
   - component: {fileID: 54503151412084260}
+  - component: {fileID: 114118293727856708}
   - component: {fileID: 114109010168162732}
-  - component: {fileID: 114799689601062816}
   m_Layer: 11
   m_Name: berryBurst
   m_TagString: Enemy Weapon
@@ -116,7 +116,7 @@ MonoBehaviour:
   speed: 0
   autoDestroy: 1
   lifeSpan: 6
---- !u!114 &114799689601062816
+--- !u!114 &114118293727856708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -124,11 +124,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1821555215185570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a88b71bb1cceab49863091fb048e0d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 66919fb1644c9334f837d4e5823ad350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 1
+  minDamage: 1
+  maxDamage: 3
   destroyOnHit: 1
+  possibleTargets:
+  - Player
 --- !u!135 &135131533200285898
 SphereCollider:
   m_ObjectHideFlags: 1
