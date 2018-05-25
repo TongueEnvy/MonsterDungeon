@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Script_HP : MonoBehaviour {
 
+    public float maxHP;
     public float HP;
     public bool canBeHurt;
     public float damageTimer;
@@ -27,6 +28,12 @@ public class Script_HP : MonoBehaviour {
             canBeHurt = true;
 
         } 
+
+        if (HP > maxHP){
+
+            HP = maxHP;
+
+        }
 
         if (HP  <= 0)
         {

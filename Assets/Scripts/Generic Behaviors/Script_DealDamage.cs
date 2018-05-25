@@ -106,6 +106,12 @@ public class Script_DealDamage : MonoBehaviour
 
             }
         }
-    }
 
+        if (destroyOnHit == true)
+        {
+
+            Destroy(gameObject);
+
+        }
+    }
 }

@@ -33,6 +33,13 @@ public class Script_PickupObtained: MonoBehaviour {
             other.gameObject.GetComponent<Script_PlayerHP>().currentTempHealth += tempHealthValue;
             }
 
+            if (gameObject.GetComponent<Generic_AddTrailingFamiliar>())
+                {
+
+                    gameObject.GetComponent<Generic_AddTrailingFamiliar>().AddFamiliar();
+
+                }
+
             Destroy(gameObject);
         }
     }

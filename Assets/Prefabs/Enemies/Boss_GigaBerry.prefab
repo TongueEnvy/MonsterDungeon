@@ -2342,7 +2342,6 @@ GameObject:
   - component: {fileID: 54444173364034372}
   - component: {fileID: 135015921808918772}
   - component: {fileID: 135173476852063814}
-  - component: {fileID: 114956939161174028}
   - component: {fileID: 114556513727652308}
   - component: {fileID: 114622175685945500}
   - component: {fileID: 114176487287987148}
@@ -10367,11 +10366,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66919fb1644c9334f837d4e5823ad350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 3
-  maxDamage: 8
+  minDamage: 7
+  maxDamage: 10
   destroyOnHit: 0
   possibleTargets:
   - Enemy
+  - Breakable
+  - Player
 --- !u!114 &114817752753911950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10395,19 +10396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3805e06607a57b44977f67ac350b69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114956939161174028
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1580765874982864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a88b71bb1cceab49863091fb048e0d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageValue: 1
-  destroyOnHit: 0
 --- !u!135 &135015921808918772
 SphereCollider:
   m_ObjectHideFlags: 1

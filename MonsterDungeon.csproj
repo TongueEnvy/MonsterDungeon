@@ -335,6 +335,7 @@
     <Compile Include="Assets\Examples\Scripts\RandomInstancing.cs" />
     <Compile Include="Assets\Examples\Scripts\RandomWalk.cs" />
     <Compile Include="Assets\Examples\Scripts\SpawnPrefabOnKeyDown.cs" />
+    <Compile Include="Assets\Generic_AddTrailingFamiliar.cs" />
     <Compile Include="Assets\Generic_FamiliarTrail.cs" />
     <Compile Include="Assets\Graphics\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\Graphics\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
@@ -349,8 +350,9 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+    <Compile Include="Assets\Player_HPBar.cs" />
+    <Compile Include="Assets\player_TrackSpecialEffects.cs" />
     <Compile Include="Assets\Scripts\Enemies\Script_AddEnemyToRoom.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Script_DealDamage.cs" />
     <Compile Include="Assets\Scripts\Enemies\Script_destroyed.cs" />
     <Compile Include="Assets\Scripts\Enemies\Script_HP.cs" />
     <Compile Include="Assets\Scripts\Enemies\Script_HP_GigaBerry.cs" />
@@ -365,6 +367,7 @@
     <Compile Include="Assets\Scripts\Generic Behaviors\Generic_SpawnEnemy.cs" />
     <Compile Include="Assets\Scripts\Generic Behaviors\GenericMeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Generic Behaviors\GenericSlashAttack.cs" />
+    <Compile Include="Assets\Scripts\Generic Behaviors\Script_DealDamage.cs" />
     <Compile Include="Assets\Scripts\Player\MeleePlayerMove.cs" />
     <Compile Include="Assets\Scripts\Player\Newton\script_characterNewtonAttack.cs" />
     <Compile Include="Assets\Scripts\Player\Script_PlayerHP.cs" />

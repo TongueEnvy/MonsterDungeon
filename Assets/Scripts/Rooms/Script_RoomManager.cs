@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Script_RoomManager: MonoBehaviour {
     public List<GameObject> enemies;
@@ -11,13 +12,48 @@ public class Script_RoomManager: MonoBehaviour {
     public AnimationClip doorsOpen;
     public AnimationClip doorsClose;
     public bool enemiesHaveSpawned;
+    public List<Light> sceneLights;
 
     private void OnTriggerEnter(Collider other)
 	{
         if (other.gameObject.GetComponent<script_testMeleePlayerMove>())
         {
+            
+            if (other.gameObject.GetComponent<script_testMeleePlayerMove>().currentRoom != gameObject)
+            {
+
+                if (other.gameObject.GetComponent<script_testMeleePlayerMove>().currentRoom != null && other.gameObject.GetComponent<script_testMeleePlayerMove>().currentRoom.GetComponent<Script_RoomManager>().sceneLights.Count > 0) {
+                    foreach (Light item in other.gameObject.GetComponent<script_testMeleePlayerMove>().currentRoom.GetComponent<Script_RoomManager>().sceneLights)
+                    {
+
+                        item.enabled = false;
+
+                    }
+                }
+
+                foreach (GameObject item in other.gameObject.GetComponent<Generic_FamiliarTrail>().followers)
+                {
+
+                    item.GetComponent<NavMeshAgent>().enabled = false;
+                    item.transform.position = gameObject.transform.position;
+                    item.GetComponent<NavMeshAgent>().enabled = true;
+
+                }
+            }
+
             other.gameObject.GetComponent<script_testMeleePlayerMove>().currentRoom = gameObject;
-            if(isWideRoom == true)
+
+            if (sceneLights.Count > 0)
+            {
+                foreach (Light item in sceneLights)
+                {
+
+                    item.enabled = true;
+
+                }
+            }
+
+            if (isWideRoom == true)
             {
 
                 other.gameObject.GetComponent<script_testMeleePlayerMove>().inWideRoom = true;
